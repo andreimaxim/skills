@@ -36,7 +36,15 @@ authorized implementation.
 ## Implementing and steering
 
 Complete the smallest end-to-end path that produces the selected scope's observable result within
-the agreed outcome. Let behavior and risk guide tests, not the proposed call graph.
+the agreed outcome. Let behavior and risk guide tests, not the proposed call graph. Build for current
+requirements rather than adding speculative generality. Use small, verified refactorings to extend
+the design as new requirements become concrete.
+
+Run focused checks throughout implementation to detect failures before later work depends on the
+change. For a behavior change, establish a test or executable check that distinguishes the required
+result from the old behavior. Treat difficulty setting up or observing that behavior as evidence to
+investigate responsibility and dependency boundaries, not as proof that the design is wrong.
+Investigate those boundaries before compensating with elaborate mocks or fixtures.
 
 During implementation, as soon as the affected flow is concrete enough to judge, step back and
 examine the implementation and surrounding code as one system, before extending that design across
@@ -45,10 +53,13 @@ callers or operators must know, join, reconstruct, coordinate, and verify. Look 
 through deletion, consolidation, clearer ownership, and fewer competing representations. Challenge
 the proposed organization, not the agreed outcome.
 
-Refine unimplemented parts of the design directly. For existing code, decide whether bounded,
-behavior-preserving preparation materially simplifies or de-risks the next behavior change enough
-to justify its cost. If so, complete and verify that preparation just before the change that needs
-it. Leave unrelated or merely desirable cleanup outside the work.
+Refine unimplemented parts of the design directly. Improve the affected existing design in small,
+behavior-preserving steps throughout implementation. Before refactoring, identify the relevant
+observable behavior and contracts to preserve and establish checks for them. Run those checks
+between steps. Keep refactoring separate from intentional behavior changes so failures can be
+traced to one or the other. When bounded preparatory refactoring reduces the effort or risk of the
+next behavior change enough to justify its cost, complete and verify it just before that change.
+Leave unrelated or merely desirable cleanup outside the work.
 
 Keep the patch easy to scan. Remove comments that merely narrate the code, but retain explanations
 of non-obvious rationale, constraints, and public contracts. Group closely related statements and
