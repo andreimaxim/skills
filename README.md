@@ -23,39 +23,30 @@ software development.
 
 ## Agents
 
-[Oracle](agents/oracle.md) reviews code, investigates difficult bugs, and advises on
-consequential architecture decisions. It examines relevant code, callers, and tests
-to provide evidence-backed findings or recommendations. It is read-only and does
-not implement changes.
+[Oracle](agents/oracle.md) (Fable 5.1 high) reviews code, investigates difficult bugs,
+and advises on consequential architecture decisions. It examines relevant code,
+callers, and tests to provide evidence-backed findings or recommendations. It is
+read-only and does not implement changes.
 
-[Finder](agents/finder.md) locates local code by behavior or concept, following
-callers and related implementations across modules. It returns file paths, line
-numbers, and an explanation of how the code connects.
+[Finder](agents/finder.md) (Sonnet high) locates local code by behavior or concept,
+following callers and related implementations across modules. It returns file
+paths, line numbers, and an explanation of how the code connects.
 
-[Librarian](agents/librarian.md) researches external repositories, dependencies,
-architecture, and commit history using authoritative sources. It cites relevant
-revisions and source files and identifies limits in access or evidence. It leaves
-the working checkout unchanged and does not run fetched code.
+[Librarian](agents/librarian.md) (Sonnet high) researches external repositories,
+dependencies, architecture, and commit history using authoritative sources. It cites
+relevant revisions and source files and identifies limits in access or evidence.
+It leaves the working checkout unchanged and does not run fetched code.
 
-[Editor](agents/editor.md) improves a draft's clarity and flow while preserving its
-meaning. It can rebuild sentences, reorder paragraphs, and remove AI writing patterns.
-It returns revised text or edits explicitly assigned files. The main agent remains
-responsible for the document's purpose and content.
+[Editor](agents/editor.md) (Opus low) improves a draft's clarity and flow while
+preserving its meaning. It can rebuild sentences, reorder paragraphs, and remove AI
+writing patterns. It returns revised text or edits explicitly assigned files. The
+main agent remains responsible for the document's purpose and content.
 
-[Scout](agents/scout.md) investigates proposed changes to identify affected behavior
-and consumers, compatibility risks, and unresolved questions. It may run focused
-experiments in disposable environments while leaving the working checkout and shared
-resources unchanged. It returns findings, not an implementation or plan.
-
-The agents use these Claude Code configurations:
-
-| Agent | Model/effort |
-| --- | --- |
-| Oracle | `claude-fable-5-1`/high |
-| Finder | `sonnet`/high |
-| Librarian | `sonnet`/high |
-| Editor | `opus`/low |
-| Scout | `claude-sonnet-5-5`/high |
+[Scout](agents/scout.md) (Sonnet 5.5 high) investigates proposed changes to identify
+affected behavior and consumers, compatibility risks, and unresolved questions.
+It may run focused experiments in disposable environments while leaving the working
+checkout and shared resources unchanged. It returns findings, not an implementation
+or plan.
 
 Sources are recorded in agent frontmatter comments because Claude Code's agent
 schema has no source metadata field.
