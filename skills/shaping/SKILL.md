@@ -55,8 +55,11 @@ value. What was happening when somebody felt the need to ask for this?
 If we can't tell what the specific pain point is, the appetite is useful for determining the amount
 of research needed. We can stop or set the idea aside rather than manufacture a problem to solve.
 
-"Redesign" or "refactoring" is a grab-bag, not a project. We need to figure out what it means,
-where it starts, and where it ends.
+Push back on open-ended improvement requests that name an area or activity without a single problem
+or use case. Without that focus, we cannot tell which changes belong or what “done” means. Explain
+this limitation and help the user identify and choose a specific problem to address. What is not
+working, and in what context? Which parts of the existing design can stay the same, and which need
+to change? Agree on the problem and appetite before defining the solution's elements.
 
 Read the [dot calendar case study](reference/dot-calendar.md) for an example of narrowing a request
 and fitting a solution to an appetite.
