@@ -17,7 +17,7 @@ software development. It is based on agents and skills from
 - [naming-things](skills/naming-things/SKILL.md): chooses names and terminology by
   clarifying meaning, behavior, and reader context.
 - [explaining-code](skills/explaining-code/SKILL.md): explains how code and software
-  systems work through evidence-driven walkthroughs and code-native views.
+  systems work and investigates the reasons behind design decisions.
 - [technical-writing](skills/technical-writing/SKILL.md): writes developer documentation
   and hands the completed draft to Editor to improve clarity and flow.
 - [building-skills](skills/building-skills/SKILL.md): writes and revises skill prompts,

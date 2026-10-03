@@ -82,7 +82,7 @@ For example, `explaining-code` uses:
 
 ```yaml
 name: explaining-code
-description: Explains how code and software systems work through evidence-driven walkthroughs, code-native views, and concise technical prose. Use for code explanations, architecture walkthroughs, runtime flows, data flows, state transitions, or ownership questions.
+description: Explains how code and software systems work and investigates the reasons behind design decisions. Use for code explanations, architecture walkthroughs, runtime and data flows, state transitions, ownership questions, or historical design rationale.
 ```
 
 The name and description support discovery before the body loads. Put activation conditions

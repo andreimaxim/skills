@@ -1,11 +1,12 @@
 ---
 name: explaining-code
-description: Explains how code and software systems work through evidence-driven walkthroughs, code-native views, and concise technical prose. Use for code explanations, architecture walkthroughs, runtime flows, data flows, state transitions, or ownership questions.
+description: Explains how code and software systems work and investigates the reasons behind design decisions. Use for code explanations, architecture walkthroughs, runtime and data flows, state transitions, ownership questions, or historical design rationale.
 ---
 
 # Explaining code
 
-Help the user build an accurate mental model of existing code and system behavior.
+Help the user build an accurate mental model of existing code, system behavior, and the reasons
+behind its design.
 
 ## Establish the behavior
 
@@ -17,13 +18,37 @@ Read only enough of the system to answer the question. Use tests and contracts t
 cases and invariants when they matter. Distinguish behavior observed in the code from an inference.
 State material uncertainty instead of presenting a plausible explanation as established behavior.
 
-Explain one coherent path at a time. Lead with what the code does, then show how it does it. Name
-the functions, types, files, data, and ownership boundaries that the reader needs. Keep unrelated
-implementation detail out of the explanation.
+Explain one coherent path or decision at a time. Lead with the answer to the user's question, then
+show the behavior or evidence that supports it. Name the functions, types, files, data, and ownership
+boundaries the reader needs. Keep unrelated implementation detail out of the explanation.
 
 Use the repository's domain terms consistently. Use its programming language for code sketches.
 When a path crosses languages, show each boundary in its actual language. Use language-neutral
 pseudocode when syntax would distract from the behavior.
+
+## Explain the rationale
+
+When the question concerns a design's origin or rationale, investigate the decision as well as the
+current code. Questions about why execution produces a particular result may need only an explanation
+of the current code.
+
+For historical questions, trace the changes that introduced or materially reshaped the behavior
+rather than treating the last commit to touch a line as its explanation. Consult relevant PR
+discussions, tickets, design records, and incident evidence when available and useful for resolving
+the question. Look for the constraints, alternatives, and tradeoffs that informed the choice. Keep
+the investigation proportional to the question.
+
+Distinguish what the code does, what the historical record explicitly says, and what you infer from
+the evidence. A change from a limit of 50 to 100 establishes the new limit, not why 100 was chosen.
+Explain the evidence supporting an inferred rationale without presenting it as recorded intent. A
+benefit the code provides today does not establish its original motivation or show that the original
+constraint still applies. Treat a rationale suggested by the user as a hypothesis to test, not a
+conclusion to confirm.
+
+Cite the sources supporting historical claims and explain material contradictions in the evidence.
+When the reason remains unknown, say what the inspected sources establish and what remains
+unresolved. Identify missing records, search gaps, or access limitations when they materially affect
+the answer. Failure to find a reason is not evidence that no reason existed.
 
 ## Show the behavior
 
@@ -114,6 +139,6 @@ Explain the current system rather than silently redesigning it. If the user asks
 separate the factual walkthrough from the judgment. If the user asks about a proposed change,
 separate current behavior from proposed behavior and use a diff when it makes the distinction clear.
 
-Before finishing, check that the explanation answers the user's actual question, traces every
-important claim to inspected code, uses consistent terms, and includes no visual that is more
-complex than the behavior it clarifies.
+Before finishing, check that the explanation answers the user's actual question, supports important
+claims with inspected evidence, distinguishes findings from inference, uses consistent terms, and
+includes no visual more complex than the behavior it clarifies.
