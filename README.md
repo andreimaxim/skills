@@ -1,7 +1,11 @@
 # Engineering skills
 
 The `engineering` Claude Code plugin provides seven skills and five agents for
-software development.
+software development. It is based on agents and skills from
+[Amp](https://github.com/ampcode/official-plugins),
+[pstack](https://github.com/cursor/plugins/tree/main/pstack),
+[HumanLayer](https://github.com/humanlayer/skills), and
+[Matt Pocock's skills](https://github.com/mattpocock/skills).
 
 ## Skills
 
@@ -47,9 +51,6 @@ affected behavior and consumers, compatibility risks, and unresolved questions.
 It may run focused experiments in disposable environments while leaving the working
 checkout and shared resources unchanged. It returns findings, not an implementation
 or plan.
-
-Sources are recorded in agent frontmatter comments because Claude Code's agent
-schema has no source metadata field.
 
 ## Installation
 

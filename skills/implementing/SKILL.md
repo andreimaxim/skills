@@ -1,8 +1,6 @@
 ---
 name: implementing
 description: Implements agreed work through emergent scopes, architectural refinement, and independent verification. Use for shaped work or substantial implementation; not routine edits.
-metadata:
-  source: "https://github.com/cursor/plugins/blob/main/cursor-team-kit/skills/deslop/SKILL.md"
 ---
 
 # Implementing

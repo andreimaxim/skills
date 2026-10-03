@@ -1,8 +1,6 @@
 ---
 name: building-skills
 description: Writes and revises skill prompts, including activation descriptions, instructions, and references. Use when creating or refining a skill, or turning an established practice into one.
-metadata:
-  source: "https://github.com/ampcode/official-plugins/blob/main/skills/building-skills/SKILL.md"
 ---
 
 # Building Skills
@@ -78,8 +76,7 @@ containing `name` and `description`, followed by the Markdown body.
   focus on capability and activation conditions. Quote values containing YAML punctuation,
   such as colons, so they parse as one string.
 - **Optional metadata:** Include shared specification fields when they serve a concrete purpose.
-  When adapting an existing skill, record its upstream HTTPS URL in `metadata.source` and
-  preserve any attribution or license notices.
+  When adapting an existing skill, credit the source and preserve any license notices.
 
 For example, `explaining-code` uses:
 

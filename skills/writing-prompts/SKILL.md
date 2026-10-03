@@ -1,8 +1,6 @@
 ---
 name: writing-prompts
 description: "Writes and revises text a model consumes: system prompts, tool and parameter descriptions, CLAUDE.md and AGENTS.md guidance, skill descriptions, and prompt templates. Use when drafting, editing, or reviewing any of these. Load before changing model instructions."
-metadata:
-  source: "https://github.com/ampcode/official-plugins/blob/main/skills/writing-prompts/SKILL.md"
 ---
 
 # Writing Model Instructions

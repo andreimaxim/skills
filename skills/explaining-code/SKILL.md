@@ -1,12 +1,6 @@
 ---
 name: explaining-code
 description: Explains how code and software systems work through evidence-driven walkthroughs, code-native views, and concise technical prose. Use for code explanations, architecture walkthroughs, runtime flows, data flows, state transitions, or ownership questions.
-metadata:
-  credits:
-    skill: show-me
-    author: Dex Horthy
-    organisation: Humanlayer
-    url: "https://github.com/humanlayer/skills/blob/main/plugins/show-me/skills/show-me/SKILL.md"
 ---
 
 # Explaining code

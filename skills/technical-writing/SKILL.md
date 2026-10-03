@@ -1,8 +1,6 @@
 ---
 name: technical-writing
 description: Writes and revises technical documentation, including READMEs, how-to guides, reference, explanations, technical proposals, and design documents, around what the reader needs to accomplish or understand. Use when drafting or editing developer documentation, shaping pitches, ticket solutions, or PR descriptions.
-metadata:
-  source: "https://github.com/cursor/plugins/blob/c47b12849e43f18d5c374c7069c744cc55b0ea00/pstack/skills/technical-writing/SKILL.md"
 ---
 
 # Technical writing
